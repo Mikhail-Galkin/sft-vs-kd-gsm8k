@@ -1,0 +1,14 @@
+data/splits/
+artifacts/
+checkpoints/
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
+wandb/
+*.npz
+*.npy
+.DS_Store
+.idea/
+.vscode/

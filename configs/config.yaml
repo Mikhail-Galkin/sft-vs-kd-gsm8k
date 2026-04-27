@@ -1,0 +1,31 @@
+student_model: Qwen/Qwen2.5-1.5B
+teacher_model: Qwen/Qwen2.5-14B
+
+training:
+  lr: 0.0002
+  scheduler: cosine
+  warmup_ratio: 0.05
+  batch_size: 4
+  grad_accum: 8
+  epochs: 3
+  eval_steps: 50
+  early_stopping_patience: 5
+
+lora:
+  rank: 16
+  alpha: 32
+  target_modules: [q_proj, k_proj, v_proj, o_proj]
+  dropout: 0.05
+
+logit_kd:
+  temperature: 4.0
+  alpha: 0.5
+
+inference:
+  max_new_tokens: 512
+  do_sample: false
+
+paths:
+  splits_dir: data/splits
+  artifacts_dir: artifacts
+  checkpoints_dir: checkpoints
