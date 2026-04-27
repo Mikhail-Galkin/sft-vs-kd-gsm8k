@@ -94,7 +94,7 @@ python eval/bootstrap.py
 ## Структура
 
 ```
-pragmat/
+sft-vs-kd-gsm8k/
 ├── configs/config.yaml
 ├── data/prepare_splits.py
 ├── teacher/
